@@ -18,6 +18,10 @@
   --accent-color: #8ff9da; 
 }
 
+span {
+  color: var(--accent-color);
+}
+
 *::selection {
   background: var(--accent-color);
   color: var(--bg-color);
@@ -513,6 +517,75 @@ section {
     justify-content: center;
 }
 
+.projs-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.projs-container .projs-box {
+  flex: 1 1 30rem;
+  background: #14213c;
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: left;
+  border: .2rem solid var(--bg-color);
+  height: 38rem;
+}
+
+.projs-container .projs-box:hover {
+  transform: scale(1.05);
+}
+
+.projs-box h2, p, h3{
+  padding: 0 1.8rem;
+}
+
+.projs-box h2 {
+  font-size: 3.5rem;
+  padding-top: 2rem;
+}
+
+.projs-box h3 {
+  font-size: 1.9rem;
+  font-weight: 500;
+  margin: 1rem 0 3rem;
+  
+}
+
+.projs-box p {
+  font-size: 1.6rem;
+
+}
+
+.headerprojs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0.3rem 1.8rem;
+}
+
+.kiri i {
+  font-size: 4.5rem;
+  color: var(--accent-color);
+}
+
+.kanan {
+  gap: 2rem;
+}
+
+.kanan i {
+  font-size: 2.8rem;
+  color: var(--main-color);
+}
+
+.kanan i.bxl-github {
+  margin-right: 0.6rem; 
+}
+
 @media (max-width: 1200px) {
   .navbar a {
     font-size: 1.5rem;
@@ -698,6 +771,24 @@ section {
     font-size: 10px;
   }
 
+  .projs-container .projs-box {
+    height: 25rem;
+  }
+  .projs-box h2 {
+    font-size: 2.6rem;
+  }
+
+  .projs-box h3 {
+    font-size: 1.6rem;
+  }
+
+  .projs-box p {
+    font-size: 1.4rem;
+  }
+
+  .projs-box i {
+    font-size: 2.1rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -783,5 +874,25 @@ section {
 
   .projects{
     padding-top: 5rem;
+  }
+
+  .projs-container .projs-box {
+    height: 30rem;
+  }
+
+  .projs-box h2 {
+    font-size: 2.4rem;
+  }
+
+  .projs-box h3 {
+    font-size: 1.5rem;
+  }
+
+  .projs-box p {
+    font-size: 1.3rem;
+  }
+
+  .projs-box i {
+    font-size: 2rem;
   }
 }
