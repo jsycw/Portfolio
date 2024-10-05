@@ -47,7 +47,7 @@ function branch(len) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const fullText = "hi, Jessy here."; 
+    const fullText = "Hi, Jessy here."; 
     let index = 0;
     const typingSpeed = 290; 
     const typingElement = document.getElementById("typing-text");

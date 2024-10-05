@@ -708,6 +708,10 @@ section {
   .tab-content p {
     font-size: 1.8rem;
   }
+
+  .about-content {
+    padding: 5rem;
+  } 
 }
 
 @media (max-width: 768px) {
@@ -727,6 +731,7 @@ section {
   .home-content p {
     font-size: 1.8rem;
     line-height: 2.5rem;
+    max-width: 60rem;
   }
 
   #typing-text {
@@ -789,6 +794,10 @@ section {
   .projs-box i {
     font-size: 2.1rem;
   }
+
+  .about-content {
+    padding: 3rem;
+  } 
 }
 
 @media (max-width: 576px) {
@@ -816,6 +825,10 @@ section {
 
   .btn {
     font-size: 1.5rem;
+  }
+
+  .about-content {
+    padding: 2.3rem;
   }
 
   .about-content h3 {
@@ -877,7 +890,7 @@ section {
   }
 
   .projs-container .projs-box {
-    height: 30rem;
+    height: 32rem;
   }
 
   .projs-box h2 {
