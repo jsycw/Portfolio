@@ -98,30 +98,50 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  let slideIndex = 1;
-  showSlides(slideIndex);
+
+let slideIndex = 1;
+let autoSlideInterval;
+
+showSlides(slideIndex);
+startAutoSlide();
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+  resetAutoSlide();
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+  resetAutoSlide();
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("carousel");
+  let lines = document.getElementsByClassName("line");
+
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
   
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-  
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
+
+  for (i = 0; i < lines.length; i++) {
+    lines[i].className = lines[i].className.replace(" active", "");
   }
-  
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("carousel");
-    let lines = document.getElementsByClassName("line");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < lines.length; i++) {
-      lines[i].className = lines[i].className.replace("active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    lines[slideIndex-1].className += " active";
-  }
-  
+
+  slides[slideIndex-1].style.display = "block";
+  lines[slideIndex-1].className += " active";
+}
+
+function startAutoSlide() {
+  autoSlideInterval = setInterval(function() {
+    plusSlides(1);
+  }, 5000); 
+}
+
+function resetAutoSlide() {
+  clearInterval(autoSlideInterval);
+  startAutoSlide();
+}
