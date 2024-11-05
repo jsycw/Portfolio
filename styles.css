@@ -815,7 +815,7 @@ section {
   } 
 }
 
-@media (max-width: 576px) {
+@media (max-width: 725px) {
   h2 {
     font-size: 3rem;
   }
@@ -883,7 +883,7 @@ section {
   }
 
   .carousel img {
-    height: 200px;
+    height: 300px;
   }
 
   .title{
