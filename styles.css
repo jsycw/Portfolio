@@ -813,6 +813,10 @@ section {
   .about-content {
     padding: 3rem;
   } 
+
+  .credits p {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width: 725px) {
@@ -922,5 +926,9 @@ section {
 
   .projs-box i {
     font-size: 2rem;
+  }
+
+  .credits p {
+    font-size: 1.3rem;
   }
 }
