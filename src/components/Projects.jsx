@@ -85,6 +85,13 @@ export function Projects() {
   const { index, go, goTo } = useAutoAdvance(n, AUTO_MS);
   const current = featuredProjects[index];
 
+  useEffect(() => {
+    featuredProjects.forEach((p) => {
+      const img = new Image();
+      img.src = p.image;
+    });
+  }, []);
+
   return (
     <section className="projects" id="projects">
       <motion.div
@@ -116,7 +123,7 @@ export function Projects() {
               left: 0,
             }}
           >
-              <img src={current.image} alt="" style={{ width: "100%" }} loading="lazy" />
+              <img src={current.image} alt="" style={{ width: "100%" }}/>
               <div className="explanation">
                 <div className="title">{current.title}</div>
                 <div className="desc">{current.description}</div>
